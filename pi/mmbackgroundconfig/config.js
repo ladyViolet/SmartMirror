@@ -68,7 +68,7 @@ var config = {
 			config: {
 				location: "Regensburg",
 				locationID: "", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "ff7faebc9c8c34ad7992a4e29e89744",
+				appid: "ff7f7aebc9c8c34ad7992a4e29e89744",
 				lang: "de",
 				//showFeelsLike: true,
 				//showWindDirection: true,
@@ -82,7 +82,7 @@ var config = {
 			config: {
 				location: "Regensburg",
 				locationID: "2849483", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "ff7faebc9c8c34ad7992a4e29e89744",
+				appid: "ff7f7aebc9c8c34ad7992a4e29e89744",
 				lang: "de"
 			}
 		},
