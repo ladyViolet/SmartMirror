@@ -1,0 +1,28 @@
+    /dts-v1/;
+    /plugin/;
+    / {
+       compatible = "brcm,bcm2835", "brcm,bcm2708", "brcm,bcm2709";
+       
+       fragment@0 {
+          target-path = "/";
+          __overlay__ {
+             keypad: breadboard_keys {
+                compatible = "gpio-keys";
+                #address-cells = <1>;
+                #size-cells = <0>;
+		autorepeat;
+                button@24 {
+                   label = "breadboard back";
+                   linux,code = <44>;
+                   gpios = <&gpio 24 1>;
+                };
+                button@22 {
+                   label = "breadboard up";
+                   linux,code = <45>;
+                   gpios = <&gpio 22 1>;
+                };
+              
+             };
+          };
+       };
+    };
