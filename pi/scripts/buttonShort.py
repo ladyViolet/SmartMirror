@@ -5,7 +5,7 @@ GPIO.setmode(GPIO.BOARD)
 import os
 
 #set bash command -- unschoene vorruebergehende lsg statt script lesen
-bashCommandWebcam1 = "#!/bin/bash \n vax=$(date +%s) \n fswebcam -r 1920x1080 --rotate 270 --no-banner /home/pi/webcam/$vax.jpg \n fswebcam -d /dev/video0 --list-controls"
+bashCommandWebcam1 = "#!/bin/bash \n vax=$(date +%s) \n fswebcam -r 1920x1080 -S 15 --rotate 270 --no-banner /home/pi/webcam/$vax.jpg \n fswebcam -d /dev/video0 --list-controls"
 #bashCommandWebcam2 = "#!/bin/bash \n fbi -a /home/pi/webcam/*.jpg"
 bashCommandDeleteAll = "#!/bin/bash \n rm -r /home/pi/webcam \n cd /home/pi \n mkdir webcam"
 bashCommandShutDown = "#!/bin/bash \n pkill -f /home/pi/MagicMirror"
@@ -37,7 +37,7 @@ while(1):
         #os.system(bashCommandWebcam2)
         #fbi startet nicht
         #feh findet bild nicht; + export display?
-        #os.system('pkill -f feh')
+        os.system('pkill -f feh')
         os.system('feh --hide-pointer -x -q -B black -g 1080x1920 -S mtime /home/pi/webcam/*.jpg &')
     if GPIO.input(deleteAllImages) == 0:
         sleep(.1)
