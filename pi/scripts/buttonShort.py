@@ -11,6 +11,7 @@ bashCommandDeleteAll = "#!/bin/bash \n rm -r /home/pi/webcam \n cd /home/pi \n m
 bashCommandShutDown = "#!/bin/bash \n pkill -f /home/pi/MagicMirror"
 bashCommandIMGBack = "#!/bin/bash \n xdotool key Right"
 bashCommandIMGForward = "#!/bin/bash \n xdotool key Left"
+bashCommandCloseGallery = "#!/bin/bash \n pkill -f feh"
 
 # set pin modes
 takeImage = 16
@@ -18,12 +19,14 @@ deleteAllImages = 18
 shutDown = 12
 backButton = 22
 forwardButton = 24
+galleryButton = 38
 
 GPIO.setup(takeImage,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(deleteAllImages,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(shutDown,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(backButton,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(forwardButton,GPIO.IN,pull_up_down=GPIO.PUD_UP)
+GPIO.setup(galleryButton,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 
 while(1):        
     if GPIO.input(takeImage) == 0:
@@ -45,6 +48,7 @@ while(1):
     if GPIO.input(shutDown) == 0:
         sleep(.1)
         print ("program shut down")
+        os.system('pkill -f motionScript.py')
         os.system(bashCommandShutDown)
         
     if GPIO.input(backButton) == 0:
@@ -59,3 +63,8 @@ while(1):
         os.system(bashCommandIMGForward)
         sleep(.4)
         
+    if GPIO.input(galleryButton) == 0:
+        sleep(.1)
+        print ("close gallery")
+        os.system(bashCommandCloseGallery)
+        sleep(.4)

@@ -36,17 +36,21 @@ var config = {
 
 	modules: [
 		{
+			disabled: true,
 			module: "alert",
 		},
 		{
+			disabled: true,
 			module: "updatenotification",
 			position: "top_bar"
 		},
 		{
+			disabled: true,
 			module: "clock",
 			position: "top_left"
 		},
 		{
+			disabled: true,
 			module: "calendar",
 			header: "Feiertage",
 			position: "top_left",
@@ -59,10 +63,12 @@ var config = {
 			}
 		},
 		{
+			disabled: true,
 			module: "compliments",
 			position: "lower_third"
 		},
 		{
+			disabled: true,
 			module: "currentweather",
 			position: "top_right",
 			config: {
@@ -76,6 +82,7 @@ var config = {
 			}
 		},
 		{
+			disabled: true,
 			module: "weatherforecast",
 			position: "top_right",
 			header: "Weather Forecast",
@@ -87,6 +94,7 @@ var config = {
 			}
 		},
 		{
+			disabled: true,
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {

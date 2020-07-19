@@ -8,14 +8,14 @@ import threading
 from datetime import datetime
 
 motionSensor = 36
-# the times the sensor needs to be activated to react
 motionCounter = 0
+saverIsActive = False
 
-bashCommandActivateScreensaver = "#!/bin/bash \n xset s activate"
-bashCommandScreenOff = "#!/bin/bash \n xset s on"
-bashCommandScreenOn = "#!/bin/bash \n xset s off"
+#bashCommandScreenOff = "#!/bin/bash \n xset dpms force off"
+bashCommandScreenOff = "#!/bin/bash \n feh -F -Y /home/pi/Pictures/Hintergrund.jpg"
 bashCommandDeleteAll = "#!/bin/bash \n rm -r /home/pi/webcam \n cd /home/pi \n mkdir webcam"
-bashCommandLeaveGallery = "#!/bin/bash \n xdotool key Escape"
+bashCommandLeaveGallery = "#!/bin/bash \n pkill -f feh"
+# bashCommandKillFeh = "#!/bin/bash \n feh -kill"
 
 GPIO.setup(motionSensor, GPIO.IN)
 
@@ -86,30 +86,43 @@ tmr.start()
 
                     
 def disableScreensaver():
+    global saverIsActive
+    saverIsActive = False
     print("screensaver disabled!")
+    print(saverIsActive)
     #os.system(bashCommandScreenOn)
+    os.system(bashCommandLeaveGallery)
+    os.system(bashCommandLeaveGallery)
+    #os.system(bashCommandLeaveGallery)
     
 def activateScreensaver():
+    global saverIsActive
+    saverIsActive = True
     global motionCounter
     print("screensaver activated!")
+    print(saverIsActive)
     motionCounter = 0
-    #os.system(bashCommandActivateScreensaver)
-    #os.system(bashCommandScreenOff)
+    os.system(bashCommandScreenOff)
 
 def MOTION(motionSensor):
-                global motionCounter
-                motionCounter +=1
-                print("Motion Detected!", motionCounter)
-                tmr.restart_timer()
-                
-                if motionCounter == 3:
-                    disableScreensaver()
-                    motionCounter = 0
-                    
+    global saverIsActive     
+    global motionCounter
+    
+    motionCounter +=1
+    if motionCounter > 3:
+        motionCounter = 0
+    print("Motion Detected!", motionCounter, saverIsActive)
+    tmr.restart_timer()
+    
+    if ((motionCounter == 3) and (saverIsActive == True)):
+        disableScreensaver()
+        motionCounter = 0
+        
 
 print("PIR Module Test (CTRL+C to exit)")
-sleep(1)
-activateScreensaver()
+#sleep(1)
+#os.system(bashCommandLeaveGallery)
+#activateScreensaver()
 print("Ready")
 
 try:

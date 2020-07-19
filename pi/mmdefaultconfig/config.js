@@ -47,6 +47,7 @@ var config = {
 			position: "top_left"
 		},
 		{
+			disabled: true,
 			module: "calendar",
 			header: "Feiertage",
 			position: "top_left",
@@ -59,6 +60,7 @@ var config = {
 			}
 		},
 		{
+			disabled: true,
 			module: "compliments",
 			position: "lower_third"
 		},
@@ -87,6 +89,7 @@ var config = {
 			}
 		},
 		{
+			disabled: true,
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {
