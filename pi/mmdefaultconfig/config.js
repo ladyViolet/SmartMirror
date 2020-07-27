@@ -60,7 +60,7 @@ var config = {
 			}
 		},
 		{
-			disabled: true,
+			disabled: false,
 			module: "compliments",
 			position: "lower_third"
 		},
@@ -103,6 +103,15 @@ var config = {
 				showPublishDate: true,
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
+			}
+		},
+		{
+			module: "MMM-ImagesPhotos",
+			position: "bottom_bar",
+			config: {
+				animationSpeed: 0,
+				updateInterval: 0,
+				maxWidth: "200px",
 			}
 		},
 		/*{
