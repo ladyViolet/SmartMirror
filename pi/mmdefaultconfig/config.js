@@ -63,6 +63,10 @@ var config = {
 			disabled: false,
 			module: "compliments",
 			position: "lower_third"
+			anytime: ["Hallo, ich bin ein SmartMirror! \n Ich möchte Ihnen bei der Brillensuche behilflich sein. \n Drücken Sie auf das Kamerasymbol 📷 um ein Foto aufzunehmen. \n Mit den Pfeiltasten ← → kann zwischen den Bildern navigiert werden. \n Über das X gelangen Sie zurück in den Spiegelmodus. \n Mit dem Löschen-Button 🗑️ werden Ihre Bilder wieder entfernt. \n Viel Spaß bei der Brillenschau!"],
+			morning: ["Guten Morgen, ich bin ein SmartMirror! \n Ich möchte Ihnen bei der Brillensuche behilflich sein. \n Drücken Sie auf das Kamerasymbol 📷 um ein Foto aufzunehmen. \n Mit den Pfeiltasten ← → kann zwischen den Bildern navigiert werden. \n Über das X gelangen Sie zurück in den Spiegelmodus. \n Mit dem Löschen-Button 🗑️ werden Ihre Bilder wieder entfernt. \n Viel Spaß bei der Brillenschau!"],
+			afternoon: ["Guten Tag, ich bin ein SmartMirror! \n Ich möchte Ihnen bei der Brillensuche behilflich sein. \n Drücken Sie auf das Kamerasymbol 📷 um ein Foto aufzunehmen. \n Mit den Pfeiltasten ← → kann zwischen den Bildern navigiert werden. \n Über das X gelangen Sie zurück in den Spiegelmodus. \n Mit dem Löschen-Button 🗑️ werden Ihre Bilder wieder entfernt. \n Viel Spaß bei der Brillenschau!"],
+			evening: ["Guten Abend, ich bin ein SmartMirror! \n Ich möchte Ihnen bei der Brillensuche behilflich sein. \n Drücken Sie auf das Kamerasymbol 📷 um ein Foto aufzunehmen. \n Mit den Pfeiltasten ← → kann zwischen den Bildern navigiert werden. \n Über das X gelangen Sie zurück in den Spiegelmodus. \n Mit dem Löschen-Button 🗑️ werden Ihre Bilder wieder entfernt. \n Viel Spaß bei der Brillenschau!"]
 		},
 		{
 			module: "currentweather",
