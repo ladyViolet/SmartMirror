@@ -1,4 +1,4 @@
-[![SMartMirror Preview on YouTube](https://www.youtube.com/watch?v=nZDgbsyzHV8)
+[![SmartMirror Preview on YouTube](https://img.youtube.com/vi/nZDgbsyzHV8.jpg)](https://www.youtube.com/watch?v=nZDgbsyzHV8)
 <img src="images/SmartMirrorLogo100dpi.png" alt="drawing" width="200"/>
 
 # SmartMirror: the smart mirror for use in opticians' shops.
