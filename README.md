@@ -1,5 +1,5 @@
-<img src="images/SmartMirrorLogo100dpi.png" alt="smart-mirror-picture" width="200"/>
-<img src="images/DSC00963.jpeg" alt="smart-mirror-logo" width="500"/>
+<img src="images/SmartMirrorLogo100dpi.png" alt="smart-mirror-logo" width="200"/>
+<img src="images/DSC00963.jpeg" alt="smart-mirror-picture" width="500"/>
 
 # SmartMirror: the smart mirror for use in opticians' shops.
 [![SmartMirror Preview on YouTube](https://img.youtube.com/vi/nZDgbsyzHV8.jpg)](https://www.youtube.com/watch?v=nZDgbsyzHV8)
