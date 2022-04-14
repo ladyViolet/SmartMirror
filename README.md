@@ -1,7 +1,8 @@
-[![SmartMirror Preview on YouTube](https://img.youtube.com/vi/nZDgbsyzHV8.jpg)](https://www.youtube.com/watch?v=nZDgbsyzHV8)
-<img src="images/SmartMirrorLogo100dpi.png" alt="drawing" width="200"/>
+<img src="images/SmartMirrorLogo100dpi.png" alt="smart-mirror-picture" width="200"/>
+<img src="images/DSC00963.jpeg" alt="smart-mirror-logo" width="500"/>
 
 # SmartMirror: the smart mirror for use in opticians' shops.
+[![SmartMirror Preview on YouTube](https://img.youtube.com/vi/nZDgbsyzHV8.jpg)](https://www.youtube.com/watch?v=nZDgbsyzHV8)
 
 **SmartMirror** is an open source modular smart mirror. The project is a prototypical implementation of a Smart Mirror for the use on the sales floor of optical stores, where the customer can try on different models of glasses and get photographed directly by the mirror to be able to see them later with his own glasses. The high-fidelity prototype aims at the simplest possible operation via physical buttons. By implementing the hardware with the help of a Raspberry Pi, a low-cost, expandable concept should be presented to the customer. **SmartMirror** is based on the framework **MagicMirror²** by the creator of [the original MagicMirror](https://michaelteeuw.nl/tagged/magicmirror) with the incredible help of a [growing community of contributors](https://github.com/MichMich/MagicMirror/graphs/contributors) and was extended hardware and software-sided by buttons for easy handling of the mirror. The mirror can take pictures, has a gallery function to view them and the possibility to delete them. By a built-in PIR sensor it is possible to wake up the mirror by movement and change the mode. A further mode allows to set the mirror into a slide show to display advertising in the shop window in the evening.
 
